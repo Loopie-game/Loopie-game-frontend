@@ -1,0 +1,272 @@
+$defaultEasing: cubic-bezier(0.4, 0, 0.2, 1);
+
+.Register-Container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background: var(--color-background);
+    .Register-Background {
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            height: 100%;
+            -webkit-user-drag: none;
+            animation: 1s initialRegisterBackground forwards, 5s foreverRegisterBackground alternate infinite;
+            
+        }
+        @media screen and (min-width: 768px) {
+            width: 75%;
+            position: absolute;
+            z-index: 1;
+            height: auto !important;
+            -webkit-user-drag: none;
+            animation: 1s initialRegisterBackground forwards, 5s foreverRegisterBackground alternate infinite;
+        }
+        
+    }
+    .Register-Wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        z-index: 2;
+        .Register-Component {
+            width:100%;
+            height: fit-content;
+            background-color: var(--color-foreground);
+            border-radius: 15px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            animation: 0.35s opacity forwards;
+            box-shadow: 0 0 0 1px #101316, 0 30px 30px rgba(0, 0, 0, 0.07), 0 15px 15px rgba(0, 0, 0, 0.06),
+                0 10px 8px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.03);
+            .Register-Title {
+                width: 100%;
+                height: 85px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Caviar Dreams";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                color: var(--color-text);
+            }
+
+            .Register-InputContainer {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 13px;
+                .Register-InputWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    .Register-InputTitle {
+                        font-family: "Caviar Dreams";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: var(--color-highlighthover);
+                    }
+                    .Register-InputFieldWrapper {
+                        width: 280px;
+                        height: 40px;
+                        background: var(--color-input-background);
+                        backdrop-filter: blur(5px);
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid var(--color-input-border);
+                        transition: box-shadow 0.2s, outline 0.2s ease;
+                        gap: 10px;
+                        .Register-InputIcon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding-left: 10px;
+                            filter: var(--color-icon);
+                        }
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            background-color: transparent;
+                            outline: none;
+                            border: 0;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: var(--color-text);
+
+                            &::placeholder {
+                                color: var(--color-input-placeholder)
+                            }
+                        }
+                        &:hover {
+                            box-shadow: var(--color-highlighthover) 0 0 0 2px inset;
+                        }
+                    }
+                }
+                .Register-Button {
+                    width: 280px;
+                    height: 40px;
+                    background: var(--color-text);
+                    backdrop-filter: blur(5px);
+                    border-radius: 5px;
+                    border: 2px solid var(--color-text);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: "Caviar Dreams";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: var(--color-jointext-color);
+                    cursor: pointer;
+                }
+            }
+            .Register-NeedAccountWrapper {
+                display: flex;
+                padding-bottom: 30px;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                margin-top: 10px;
+                .Register-NeedAccountTitle {
+                    font-family: "Caviar Dreams";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: var(--color-textSecondary);
+                }
+                .Register-NeedAccountButton {
+                    font-family: "Caviar Dreams";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    a {
+                        color: var(--color-text);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#TermsCheck{
+    width: 18px;
+    margin-left: 10px;
+}
+
+.Register_TermsContainer{
+    width: 100%;
+    display: flex;  
+    color: var(--color-textSecondary);
+    font-family: "Caviar Dreams";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .Register_TermsLink{
+        color: var(--color-text);
+        text-decoration:underline;
+
+    }
+
+}
+
+.Register-Component::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.animComponent {
+    opacity: 100% !important;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes initialRegisterBackground {
+    0% {
+        filter: hue-rotate(100deg);
+    }
+    100% {
+        filter: hue-rotate(240deg);
+    }
+}
+
+@keyframes foreverRegisterBackground {
+    0% {
+        filter: hue-rotate(240deg);
+    }
+    100% {
+        filter: hue-rotate(220deg);
+    }
+}
+
+.active {
+    box-shadow: var(--color-highlighthover) 0 0 0 2px inset !important;
+}
+
+.error {
+    box-shadow: rgb(255, 0, 0) 0 0 0 2px inset !important;
+}
+
+.tooltip {
+    text-decoration: none;
+    position: relative;
+}
+.tooltip div {
+    display: none;
+}
+.tooltip:hover div {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 0 0 1px #101316, 0 30px 30px rgba(0, 0, 0, 0.07), 0 15px 15px rgba(0, 0, 0, 0.06),
+        0 10px 8px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.04), 0 2px 2px rgba(0, 0, 0, 0.03);
+
+    max-width: 200px;
+    word-wrap: normal;
+    background-color: var(--color-background);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.tooltip div::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}

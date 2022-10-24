@@ -1,0 +1,133 @@
+$Size: 65px;
+
+.PageNotFound_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100vw;
+    color:  var(--color-text);
+    gap: 25px;
+    .PageNotFound_404Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        .PageNotFound_4_1 {
+            font-family: "Caviar Dreams";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            border: 2px solid var(--color-input-border);
+            border-radius: 5px;
+            width: $Size;
+            height: $Size;
+            background: var(--color-input-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-delay: 0s;
+            opacity: 0;
+            animation-name: opacity;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            transition: box-shadow 0.2s ease-in-out;
+            &:hover {
+                box-shadow: var(--color-highlighthover) 0 0 0 2px inset;
+            }
+        }
+
+        .PageNotFound_0 {
+            font-family: "Caviar Dreams";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            border: 2px solid var(--color-input-border);
+            border-radius: 5px;
+            width: $Size;
+            height: $Size;
+            background: var(--color-input-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-delay: 0.3s;
+            opacity: 0;
+            animation-name: opacity;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            transition: box-shadow 0.2s ease-in-out;
+            &:hover {
+                box-shadow: var(--color-highlighthover) 0 0 0 2px inset;
+            }
+        }
+
+        .PageNotFound_4_2 {
+            font-family: "Caviar Dreams";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            border: 2px solid var(--color-input-border);
+            border-radius: 5px;
+            width: $Size;
+            height: $Size;
+            background: var(--color-input-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-delay: .6s;
+            opacity: 0;
+            animation-name: opacity;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            transition: box-shadow 0.2s ease-in-out;
+            &:hover {
+                box-shadow: var(--color-highlighthover) 0 0 0 2px inset;
+            }
+        }
+    }
+    .PageNotFound_Face {
+        font-family: "Caviar Dreams";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .PageNotFound_Text {
+        font-family: "Caviar Dreams";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--color-text);
+    }
+
+    .PageNotFound_Back {
+        font-family: "Caviar Dreams";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        border: 2px solid var(--color-input-border);
+        border-radius: 5px;
+        width: 280px;
+        height: 40px;
+        background: var(--color-input-background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: box-shadow 0.2s, outline 0.2s ease;
+    }
+    .PageNotFound_Back:hover {
+        cursor: pointer;
+        box-shadow: var(--color-highlighthover) 0 0 0 2px inset;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+.Player_Container {
+    width: 100%;
+    @media screen and (max-height: 414px) {
+        height: 40px;
+    }
+    @media screen and (min-height: 415px) {
+        height: 100%;
+    }
+    max-height: 70px;
+    border-radius: 5px;
+    display: flex;
+    transition: height 0.2s ease-in-out;
+    background: var(--color-input-background);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: 2px solid var(--color-input-border);
+    font-family: "Caviar Dreams";
+    font-style: normal;
+    color: var(--color-text);
+    .Player_IndicatorContainer {
+
+        @media screen and (max-height: 414px) {
+            width: 30px;
+        }
+        
+        @media screen and (min-height: 415px) {
+            width: 40px;
+        }
+
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px;
+        .Player_Indicator {
+            width: 100%;
+            aspect-ratio: 1/1;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+    .Player_InfoContainer {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        .Player_InfoNickname {
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: "Caviar Dreams";
+            font-style: normal;
+            font-weight: 700;
+            @media screen and (max-height: 414px) {
+                font-size: 14px;
+            }
+            @media screen and (min-height: 415px) {
+                font-size: 16px;
+            }
+            color: var(--color-text);
+            display: flex;
+        }
+        .Player_InfoUsername{
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: "Caviar Dreams";
+            font-style: normal;
+            font-weight: 400;
+            @media screen and (max-height: 414px) {
+                font-size: 12px;
+            }
+            @media screen and (min-height: 415px) {
+                font-size: 14px;
+            }
+            color: var(--color-textSecondary);
+            display: flex;
+        }
+    }
+}
