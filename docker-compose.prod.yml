@@ -10,12 +10,3 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-    - ./nginx/conf/:/etc/nginx/conf.d/:ro
-    - ./certbot/www:/var/www/certbot/:ro
-    - /etc/nginx/ssl/:/etc/nginx/ssl/:ro
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - /etc/nginx/ssl/:/etc/letsencrypt/:rw
