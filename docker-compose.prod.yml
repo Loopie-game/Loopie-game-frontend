@@ -9,4 +9,3 @@ services:
     container_name: "${CONT_NAME}"
     ports:
       - "80:80"
-      - "443:443"
