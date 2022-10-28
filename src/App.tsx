@@ -182,6 +182,7 @@ function App() {
                   <div className="App_Container">
                     {userStore.user !== undefined && !mobileStore.isMobile && <LoggedInBar />}
                     {route.element}
+                    testtest
                   </div>
                   {mobileStore.isMobile && <MobileNav />}
                 </>
